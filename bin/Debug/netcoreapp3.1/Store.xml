@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<products>
+  <product type="Book">
+    <Properties>
+      <Property Title="Book of Jungle" />
+      <Property Price="34" />
+      <Property Pages="567" />
+    </Properties>
+  </product>
+  <product type="Book">
+    <Properties>
+      <Property Title="Misterious Island" />
+      <Property Price="22" />
+      <Property Pages="788" />
+    </Properties>
+  </product>
+  <product type="Book">
+    <Properties>
+      <Property Title="Two Captain" />
+      <Property Price="22" />
+      <Property Pages="345" />
+    </Properties>
+  </product>
+  <product type="CD">
+    <Properties>
+      <Property Title="Enya best of" />
+      <Property Price="12" />
+      <Property Tracks="34" />
+    </Properties>
+  </product>
+  <product type="CD">
+    <Properties>
+      <Property Title="Jon Bon Jovi collection" />
+      <Property Price="12" />
+      <Property Tracks="34" />
+    </Properties>
+  </product>
+</products>

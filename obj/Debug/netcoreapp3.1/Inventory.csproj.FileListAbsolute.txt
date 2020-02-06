@@ -1,0 +1,11 @@
+/Users/JarmyZ/Projects/Inventory/bin/Debug/netcoreapp3.1/Inventory
+/Users/JarmyZ/Projects/Inventory/bin/Debug/netcoreapp3.1/Inventory.deps.json
+/Users/JarmyZ/Projects/Inventory/bin/Debug/netcoreapp3.1/Inventory.runtimeconfig.json
+/Users/JarmyZ/Projects/Inventory/bin/Debug/netcoreapp3.1/Inventory.runtimeconfig.dev.json
+/Users/JarmyZ/Projects/Inventory/bin/Debug/netcoreapp3.1/Inventory.dll
+/Users/JarmyZ/Projects/Inventory/bin/Debug/netcoreapp3.1/Inventory.pdb
+/Users/JarmyZ/Projects/Inventory/obj/Debug/netcoreapp3.1/Inventory.csprojAssemblyReference.cache
+/Users/JarmyZ/Projects/Inventory/obj/Debug/netcoreapp3.1/Inventory.AssemblyInfoInputs.cache
+/Users/JarmyZ/Projects/Inventory/obj/Debug/netcoreapp3.1/Inventory.AssemblyInfo.cs
+/Users/JarmyZ/Projects/Inventory/obj/Debug/netcoreapp3.1/Inventory.dll
+/Users/JarmyZ/Projects/Inventory/obj/Debug/netcoreapp3.1/Inventory.pdb
