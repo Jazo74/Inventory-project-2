@@ -34,6 +34,13 @@ namespace Inventory
             SaveToXml(product);
             StoreProduct(product);
         }
+        public void StoreToMemory(List<Product> products)
+        {
+            foreach (Product product in products)
+            {
+                StoreProduct(product);
+            }
+        }
         void SaveToXml(Product product)
         {
             XmlDocument doc = new XmlDocument();
@@ -183,13 +190,8 @@ namespace Inventory
             Thread.Sleep(2000);
         }
         protected abstract void StoreProduct(Product product);
-        public abstract List<Product> LoadProducts()
-        {
-            XmlDocument doc = new XmlDocument();
-            doc.Load("Store.xml");
-            XmlNode root = doc.DocumentElement;
+        public abstract List<Product> LoadProducts();
 
-        }
         public abstract List<Product> GetAllProduct();
     }
 }

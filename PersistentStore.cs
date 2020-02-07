@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Xml.Serialization;
+using System.Xml;
 using System.IO;
 using System.Threading;
 
@@ -10,6 +10,13 @@ namespace Inventory
     {
         public List<Product> productList = new List<Product>();
 
+        public PersistentStore()
+        {
+            if (File.Exists("Store.xml"))
+            {
+                productList = LoadProducts();
+            }
+        }
         protected override void StoreProduct(Product product)
         {
             productList.Add(product);
@@ -23,15 +30,38 @@ namespace Inventory
         }
         public override List<Product> LoadProducts()
         {
-            XmlSerializer xmlReader = new XmlSerializer(productList.GetType());
-            FileStream file = new FileStream("Book&CDShop.xml", FileMode.Open);
-            List<Product> newList = (List<Product>)xmlReader.Deserialize(file);
-            file.Close();
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("The deSerialization has completed.");
-            Console.ForegroundColor = ConsoleColor.White;
-            Thread.Sleep(2000);
-            return newList;
+            List<Product> products = new List<Product>();
+            string type;
+            string name;
+            int price;
+            int size;
+            XmlDocument doc = new XmlDocument();
+            doc.Load("Store.xml");
+            XmlNode root = doc.DocumentElement;
+            foreach (XmlNode xmlNode in root)
+            {
+                type = xmlNode.Attributes["type"].Value;
+                name = xmlNode.ChildNodes[0].ChildNodes[0].Attributes[0].Value;
+                price = int.Parse(xmlNode.ChildNodes[0].ChildNodes[1].Attributes[0].Value);
+                size = int.Parse(xmlNode.ChildNodes[0].ChildNodes[2].Attributes[0].Value);
+                if (type == "Book")
+                {
+                    BookProduct bookProduct = new BookProduct();
+                    bookProduct.name = name;
+                    bookProduct.price = price;
+                    bookProduct.numOfPages = size;
+                    products.Add(bookProduct);
+                }
+                else
+                {
+                    CDProduct cdProduct = new CDProduct();
+                    cdProduct.name = name;
+                    cdProduct.price = price;
+                    cdProduct.numOfTracks = size;
+                    products.Add(cdProduct);
+                }
+            }
+            return products;
         }
     }
 
