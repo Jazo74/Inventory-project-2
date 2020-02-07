@@ -1,16 +1,18 @@
 ﻿<Properties StartupConfiguration="{96496AD8-D927-4B01-B8AF-1D3BE443A731}|Default">
   <MonoDevelop.Ide.ItemProperties.Inventory PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
       <File FileName="PersistentStore.cs" Line="17" Column="46" />
       <File FileName="Store.cs" Line="1" Column="1" />
+      <File FileName="StoreManager.cs" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Inventory" expanded="True">
             <Node name="Inventory" expanded="True">
-              <Node name="PersistentStore.cs" selected="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>

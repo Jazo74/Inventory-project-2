@@ -15,6 +15,7 @@ namespace Inventory
             if (File.Exists("Store.xml"))
             {
                 productList = LoadProducts();
+                Console.WriteLine("The store database has loaded.");
             }
         }
         protected override void StoreProduct(Product product)

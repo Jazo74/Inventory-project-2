@@ -35,4 +35,11 @@
       <Property Tracks="34" />
     </Properties>
   </product>
+  <product type="CD">
+    <Properties>
+      <Property Title="Pink - Dreams" />
+      <Property Price="12" />
+      <Property Tracks="11" />
+    </Properties>
+  </product>
 </products>

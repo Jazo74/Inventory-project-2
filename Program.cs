@@ -14,14 +14,7 @@ namespace Inventory
             SM = new StoreManager();
             PersistentStore myStore = new PersistentStore();
             SM.AddStorage(myStore);
-            if (File.Exists("Book & CDShop.xml"))
-            {
-                myStore.productList = myStore.LoadProducts();
-            }
-            else
-            {
-                Console.WriteLine("The database file is not exist. The program will start without it.");
-            }
+            
             bool loop = true;
             while (loop)
             {
@@ -56,35 +49,42 @@ namespace Inventory
                     SM.AddCDProduct(AnyInput("The name of the CD: "), JustNumber("The price of the CD: "), JustNumber("Number of tracks: "));
                     return true;
                 case "2":
+                    Console.Clear();
+                    Console.WriteLine("Store inventory list");
                     Console.WriteLine();
+                    Console.WriteLine("Type          Title                           Size           Price");
+                    Console.WriteLine("------------------------------------------------------------------");
+
                     foreach (Product product in SM.ListProducts())
                     {
                         if (product is BookProduct)
                         {
+                            Console.Write("Book  ");
                             BookProduct book = (BookProduct)product;
-                            Console.Write("Book title: ");
-                            Console.Write(book.name);
-                            Console.Write("Book price: ");
-                            Console.Write(book.price);
-                            Console.Write("Book Pages: ");
-                            Console.WriteLine(book.numOfPages);
+                            Console.Write(book.name.PadRight(40));
+                            string pages = book.numOfPages.ToString() + " pages";
+                            Console.Write(pages.PadRight(15));
+                            string price = book.price.ToString() + " $";
+                            Console.WriteLine(price.PadLeft(5));
                         }
                         else
                         {
+                            Console.Write("CD    ");
                             CDProduct cd = (CDProduct)product;
-                            Console.Write("CD title: ");
-                            Console.Write(cd.name);
-                            Console.Write("CD price: ");
-                            Console.Write(cd.price);
-                            Console.Write("CD tracks: ");
-                            Console.WriteLine(cd.numOfTracks);
+                            Console.Write(cd.name.PadRight(40));
+                            string tracks = cd.numOfTracks.ToString() + " tracks";
+                            Console.Write(tracks.PadRight(15));
+                            string price = cd.price.ToString() + " $";
+                            Console.WriteLine(price.PadLeft(5));
                         }
                     }
-                    Console.ReadKey();
+                    Console.WriteLine();
+                    AnyInput("Press any key to continue...");
                     return true;
                 case "3":
                     Console.WriteLine();
-                    Console.WriteLine("The value of all products in the store: " + Convert.ToString(SM.GetTotalProductPrice()));
+                    Console.WriteLine("The value of all products in the store: " + Convert.ToString(SM.GetTotalProductPrice()) + " $.");
+                    AnyInput("Press any key to continue...");
                     return true;
                 case "4":
                     return false;
