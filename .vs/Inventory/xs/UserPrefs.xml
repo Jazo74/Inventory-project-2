@@ -2,10 +2,13 @@
   <MonoDevelop.Ide.ItemProperties.Inventory PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="PersistentStore.cs" Line="18" Column="69" />
-      <File FileName="Store.cs" Line="43" Column="12" />
-      <File FileName="Program.cs" Line="16" Column="25" />
-      <File FileName="CSvStore.cs" Line="7" Column="21" />
+      <File FileName="PersistentStore.cs" Line="18" Column="15" />
+      <File FileName="Store.cs" Line="38" Column="40" />
+      <File FileName="Program.cs" Line="12" Column="35" />
+      <File FileName="CSvStore.cs" Line="72" Column="9" />
+      <File FileName="IStoreCapable.cs" Line="1" Column="1" />
+      <File FileName="StoreManager.cs" Line="6" Column="6" />
+      <File FileName="PersistentStoreCSV.cs" Line="70" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

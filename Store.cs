@@ -34,13 +34,7 @@ namespace Inventory
             SaveToXml(product);
             StoreProduct(product);
         }
-        /*public void StoreToMemory(List<Product> products)
-        {
-            foreach (Product product in products)
-            {
-                StoreProduct(product);
-            }
-        }*/
+        
         void SaveToXml(Product product)
         {
             XmlDocument doc = new XmlDocument();
@@ -185,7 +179,7 @@ namespace Inventory
             }
             
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("The product has saved to the xml file.");
+            Console.WriteLine("The product has saved to the Store.xml file.");
             Console.ForegroundColor = ConsoleColor.White;
             Thread.Sleep(2000);
         }
