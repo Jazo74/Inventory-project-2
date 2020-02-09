@@ -9,7 +9,7 @@ namespace Inventory
         static void Main(string[] args)
         {
             storeManager = new StoreManager();
-            if (args.Length > 0 && args[0] == "xml")
+            if (args.Length > 0 && args[0].ToLower() == "csv")
             {
                 PersistentStoreCSV myStore = new PersistentStoreCSV();
                 storeManager.AddStorage(myStore);

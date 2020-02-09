@@ -1,21 +1,22 @@
 ﻿<Properties StartupConfiguration="{96496AD8-D927-4B01-B8AF-1D3BE443A731}|Default">
   <MonoDevelop.Ide.ItemProperties.Inventory PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Store.cs">
     <Files>
-      <File FileName="PersistentStore.cs" Line="18" Column="15" />
+      <File FileName="PersistentStore.cs" Line="34" Column="58" />
       <File FileName="Store.cs" Line="38" Column="40" />
-      <File FileName="Program.cs" Line="12" Column="35" />
+      <File FileName="Program.cs" Line="22" Column="1" />
       <File FileName="CSvStore.cs" Line="72" Column="9" />
       <File FileName="IStoreCapable.cs" Line="1" Column="1" />
-      <File FileName="StoreManager.cs" Line="6" Column="6" />
-      <File FileName="PersistentStoreCSV.cs" Line="70" Column="2" />
+      <File FileName="StoreManager.cs" Line="7" Column="33" />
+      <File FileName="PersistentStoreCSV.cs" Line="13" Column="36" />
+      <File FileName="CDProduct.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Inventory" expanded="True">
             <Node name="Inventory" expanded="True">
-              <Node name="Program.cs" selected="True" />
+              <Node name="Store.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -27,6 +28,7 @@
           <Value>type</Value>
           <Value>size</Value>
           <Value>newProduct</Value>
+          <Value>args</Value>
         </State>
       </Pad>
     </Pads>
@@ -34,7 +36,9 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/JarmyZ/Projects/Inventory/CSvStore.cs" relfile="CSvStore.cs" line="10" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

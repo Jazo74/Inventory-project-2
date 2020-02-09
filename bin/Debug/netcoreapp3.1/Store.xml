@@ -49,4 +49,18 @@
       <Property Tracks="11" />
     </Properties>
   </product>
+  <product type="Book">
+    <Properties>
+      <Property Title="Rejto Jeno Elveszett Legio" />
+      <Property Price="34" />
+      <Property Pages="432" />
+    </Properties>
+  </product>
+  <product type="CD">
+    <Properties>
+      <Property Title="Madonna" />
+      <Property Price="9" />
+      <Property Tracks="10" />
+    </Properties>
+  </product>
 </products>

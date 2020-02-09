@@ -6,13 +6,13 @@ using System.Threading;
 
 namespace Inventory
 {
-    public class PersistentStoreCSV : Store
+    public class PersistentStoreCSV : StoreCSV
     {
         public List<Product> productList = new List<Product>();
 
         public PersistentStoreCSV()
         {
-            if (File.Exists("Store.xml"))
+            if (File.Exists("Store.csv"))
             {
                 productList = LoadProducts();
                 Console.WriteLine("The store database has loaded.");
@@ -36,7 +36,7 @@ namespace Inventory
             string name;
             int price;
             int size;
-            StreamReader streamReader = new StreamReader("Store.cs");
+            StreamReader streamReader = new StreamReader("Store.csv");
             while (!streamReader.EndOfStream)
             {
                 string[] line = streamReader.ReadLine().Split(";") ;

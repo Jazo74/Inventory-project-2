@@ -5,7 +5,7 @@ using System.Threading;
 
 namespace Inventory
 {
-    public abstract class CSvStore : IStoreCapable
+    public abstract class StoreCSV : IStoreCapable
     {
         public void StoreBookProduct(string name, int price, int pages)
         {
@@ -55,7 +55,7 @@ namespace Inventory
             else
             {
                 CDProduct c = (CDProduct)product;
-                string record = "Book;";
+                string record = "CD;";
                 record += c.name + ";";
                 record += c.price.ToString() + ";";
                 record += c.numOfTracks.ToString();
