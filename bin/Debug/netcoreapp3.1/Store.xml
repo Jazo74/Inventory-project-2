@@ -42,4 +42,11 @@
       <Property Tracks="11" />
     </Properties>
   </product>
+  <product type="CD">
+    <Properties>
+      <Property Title="Shakira" />
+      <Property Price="10" />
+      <Property Tracks="11" />
+    </Properties>
+  </product>
 </products>

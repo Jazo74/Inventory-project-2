@@ -3,17 +3,14 @@ using System.IO;
 
 namespace Inventory
 {
-    
-
     class Program
     {
-        static public StoreManager SM;
+        static public StoreManager storeManager;
         static void Main(string[] args)
         {
-            Console.WriteLine();
-            SM = new StoreManager();
+            storeManager = new StoreManager();
             PersistentStore myStore = new PersistentStore();
-            SM.AddStorage(myStore);
+            storeManager.AddStorage(myStore);
             
             bool loop = true;
             while (loop)
@@ -22,40 +19,38 @@ namespace Inventory
                 loop = Choose();
             }
         }
-
-
         static void Menu()
         {
             Console.Clear();
             Console.WriteLine("Welcome to the My Store");
             Console.WriteLine();
-            Console.WriteLine("(0) Store a new book");
-            Console.WriteLine("(1) Store a new CD");
-            Console.WriteLine("(2) List all the products");
-            Console.WriteLine("(3) The value of all the stored product");
-            Console.WriteLine("(4) Exit program");
+            Console.WriteLine("(1) Store a new book");
+            Console.WriteLine("(2) Store a new CD");
+            Console.WriteLine("(3) List all the products");
+            Console.WriteLine("(4) The value of all the stored product");
+            Console.WriteLine("(0) Exit program");
         }
         static bool Choose()
         {
             string input = Console.ReadLine();
             switch (input)
             {
-                case "0":
-                    Console.WriteLine();
-                    SM.AddBookProduct(AnyInput("The name of the book: "), JustNumber("The price of the book: "), JustNumber("Number of pages: "));
-                    return true;
                 case "1":
                     Console.WriteLine();
-                    SM.AddCDProduct(AnyInput("The name of the CD: "), JustNumber("The price of the CD: "), JustNumber("Number of tracks: "));
+                    storeManager.AddBookProduct(AnyInput("The name of the book: "), JustNumber("The price of the book: "), JustNumber("Number of pages: "));
                     return true;
                 case "2":
+                    Console.WriteLine();
+                    storeManager.AddCDProduct(AnyInput("The name of the CD: "), JustNumber("The price of the CD: "), JustNumber("Number of tracks: "));
+                    return true;
+                case "3":
                     Console.Clear();
                     Console.WriteLine("Store inventory list");
                     Console.WriteLine();
                     Console.WriteLine("Type          Title                           Size           Price");
                     Console.WriteLine("------------------------------------------------------------------");
 
-                    foreach (Product product in SM.ListProducts())
+                    foreach (Product product in storeManager.ListProducts())
                     {
                         if (product is BookProduct)
                         {
@@ -81,12 +76,12 @@ namespace Inventory
                     Console.WriteLine();
                     AnyInput("Press any key to continue...");
                     return true;
-                case "3":
+                case "4":
                     Console.WriteLine();
-                    Console.WriteLine("The value of all products in the store: " + Convert.ToString(SM.GetTotalProductPrice()) + " $.");
+                    Console.WriteLine("The value of all products in the store: " + Convert.ToString(storeManager.GetTotalProductPrice()) + " $.");
                     AnyInput("Press any key to continue...");
                     return true;
-                case "4":
+                case "0":
                     return false;
                 default:
                     return true;

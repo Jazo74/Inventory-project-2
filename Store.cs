@@ -34,13 +34,13 @@ namespace Inventory
             SaveToXml(product);
             StoreProduct(product);
         }
-        public void StoreToMemory(List<Product> products)
+        /*public void StoreToMemory(List<Product> products)
         {
             foreach (Product product in products)
             {
                 StoreProduct(product);
             }
-        }
+        }*/
         void SaveToXml(Product product)
         {
             XmlDocument doc = new XmlDocument();
